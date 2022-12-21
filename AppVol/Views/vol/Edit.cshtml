@@ -1,0 +1,48 @@
+﻿@model vol
+
+<form method="post" asp-action="Edit">
+	@*m=margin and p=padding*@
+	<div class=" border p-3 mt-4">
+		<div row="row pb-3">
+			<h2 class="text-primary">
+				Update flight
+			</h2>
+
+		</div>
+
+		<div class="mb-3">
+			<label asp-for="villeDepart"></label>
+			<input asp-for="villeDepart" class="form-control" />
+			<span asp-validation-for="villeDepart" class="text-danger"></span>
+		</div>
+
+		<div class="mb-3">
+			<label asp-for="villeArrive"></label>
+			<input asp-for="villeArrive" class="form-control" />
+			<span asp-validation-for="villeArrive" class="text-danger"></span>
+		</div>
+
+		<div class="mb-3">
+			<label asp-for="periodeDate"></label>
+			<input asp-for="periodeDate" class="form-control" />
+			<span asp-validation-for="periodeDate" class="text-danger"></span>
+		</div>
+
+
+		<div class="mb-3">
+			<label asp-for="ClassEconomique"></label>
+			<input asp-for="ClassEconomique" class="form-control" />
+			<span asp-validation-for="ClassEconomique" class="text-danger"></span>
+		</div>
+
+		<button type="submit" class="btn btn-primary">
+			Edit
+		</button>
+		<a asp-controller="vol" asp-action="Index" class="btn btn-secondary">
+			back to list
+		</a>
+
+</form>
+
+
+

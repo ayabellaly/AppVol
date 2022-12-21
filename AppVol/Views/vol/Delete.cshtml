@@ -1,0 +1,43 @@
+﻿@model vol
+
+<form method="post" asp-action="Delete">
+	<input asp-for="id" hidden />
+	<div class="border p-3 mt-4">
+		<div class="row pb-2">
+			<h2 class="text-primary">Delete Category</h2>
+			<hr />
+		</div>
+		@*<div asp-validation-summary="All"></div>*@
+		<div class="mb-3">
+			<label asp-for="villeDepart"></label>
+			<input asp-for="villeDepart" disabled class="form-control" />
+		</div>
+		<div class="mb-3">
+			<label asp-for="villeArrive"></label>
+			<input asp-for="villeArrive" disabled class="form-control" />
+		</div>
+
+		<div class="mb-3">
+			<label asp-for="periodeDate"></label>
+			<input asp-for="periodeDate" disabled class="form-control" />
+		</div>
+
+		<div class="mb-3">
+			<label asp-for="ClassEconomique"></label>
+			<input asp-for="ClassEconomique" disabled class="form-control" />
+		</div>
+
+
+
+		<button type="submit" class="btn btn-danger" style="width:150px">Delete</button>
+		<a asp-controller="Category" asp-action="Index" class="btn btn-secondary" style="width:150px">
+			Back to List
+		</a>
+	</div>
+</form>
+
+@section Scripts{
+	@{
+		<partial name="_ValidationScriptsPartial" />
+	}
+}
